@@ -33,7 +33,7 @@ public class DeliveryModule {
         
         System.out.println(date);
         
-        System.out.print("Please enter your Delivery Id : ");
+        System.out.print("Please enter your Delivery Man Id : ");
         int deliveryId = scanner.nextInt();
         
         System.out.print("Please enter your password : ");
@@ -71,7 +71,7 @@ public class DeliveryModule {
               
                             for (int j = 0 ; j < deliveryRecords.size() ; j++) { 
 
-                                if (deliveryRecords.get(j).getDeliveryMan().getDeliveryId() == deliveryMen.get(i).getDeliveryId()) {
+                                if (deliveryRecords.get(j).getDeliveryMan().getDeliveryId() == deliveryMen.get(i).getDeliveryId() && deliveryRecords.get(j).getClockOut() == null) {
                                     deliveryRecords.get(j).setClockOut(date);
                                     System.out.println("clock out success");    
                                     goBack();
